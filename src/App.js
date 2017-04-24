@@ -81,7 +81,7 @@ class TodoInput extends Component {
           <h4>Add New Todo</h4>
           <form className="form-horizontal" onSubmit={this.handleSubmit}>
             <div className="form-group">
-              <label htmlFor="inputTodoTitle" className="col-sm-2 control-label"></label>
+              <label htmlFor="inputTodoTitle" className="col-sm-2 control-label">Title</label>
               <div className="col-sm-10">
                 <input name="todoTitle"
                         type="text"
@@ -90,6 +90,38 @@ class TodoInput extends Component {
                         value={this.state.todoTitle}
                         onChange={this.handleInputChange}
                         placeholder="Title"></input>
+              </div>
+              <label htmlFor="inputTodoResponsible" className="col-sm-2 control-label">Responsible</label>
+              <div className="col-sm-10">
+                <input name="todoResponsible"
+                        type="text"
+                        className="form-control"
+                        id="inputTodoResponsible"
+                        value={this.state.todoResponsible}
+                        onChange={this.handleInputChange}
+                        placeholder="Responsible"></input>
+              </div>
+              <label htmlFor="inputTodoDesc" className="col-sm-2 control-label">Description</label>
+              <div className="col-sm-10">
+                <textarea name="todoDescription"
+                        type="text"
+                        className="form-control"
+                        id="inputTodoDesc"
+                        value={this.state.todoDescription}
+                        onChange={this.handleInputChange}
+                        placeholder="Description"></textarea>
+              </div>
+              <label htmlFor="inputTodoPriority" className="col-sm-2 control-label">Priority</label>
+              <div className="col-sm-10">
+                <select name="todoPriority"
+                        className="form-control"
+                        id="inputTodoPriority"
+                        value={this.state.todoPriority}
+                        onChange={this.handleInputChange}>
+                <option>Low</option>
+                <option>Medium></option>
+                <option>High></option>
+                </select>
               </div>
             </div>
           </form>
