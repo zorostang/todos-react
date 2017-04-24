@@ -34,6 +34,14 @@ class App extends Component {
     };
   }
 
+  handleRemoveTodo(index) {
+    this.setState({
+      todos: this.state.todos.filter(function(e, i) {
+        return i !== index;
+      })
+    })
+  }
+
   render() {
     return (
       <div className="container">
