@@ -62,4 +62,38 @@ class App extends Component {
   }
 }
 
+class TodoInput extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      todoTitle: "",
+      todoResponsible: "",
+      todoDescription: "",
+      todoPriority: "low"
+    }
+  }
+
+    render() {
+      return (
+        <div>
+          <h4>Add New Todo</h4>
+          <form className="form-horizontal" onSubmit={this.handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="inputTodoTitle" className="col-sm-2 control-label"></label>
+              <div className="col-sm-10">
+                <input name="todoTitle"
+                        type="text"
+                        className="form-control"
+                        id="inputTodoTitle"
+                        value={this.state.todoTitle}
+                        onChange={this.handleInputChange}
+                        placeholder="Title"></input>
+              </div>
+            </div>
+          </form>
+        </div>
+      )
+    }
+  }
+
 export default App;
