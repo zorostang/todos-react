@@ -73,8 +73,18 @@ class TodoInput extends Component {
       todoDescription: "",
       todoPriority: "low"
     }
+
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
+  handleInputChange(event) {
+    const target =  event.target;
+    const value = target.value;
+    const name = target.name;
+    this.setState({
+      [name]: value
+    });
+  }
     render() {
       return (
         <div>
