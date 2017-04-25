@@ -119,9 +119,12 @@ class TodoInput extends Component {
                         value={this.state.todoPriority}
                         onChange={this.handleInputChange}>
                 <option>Low</option>
-                <option>Medium></option>
-                <option>High></option>
+                <option>Medium</option>
+                <option>High</option>
                 </select>
+              </div>
+              <div className="col-sm-10 col-sm-offset-2">
+                <button type="submit" className="btn btn-success">Add Todo</button>
               </div>
             </div>
           </form>
